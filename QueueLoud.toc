@@ -1,0 +1,8 @@
+## Interface: 120005
+## Interface-Retail: 120005
+## Title: QueueLoud
+## Notes: Boosts volume, repeating alerts, and voice on BG/Arena queue pops
+## Version: 2.0
+## SavedVariables: QueueLoudDB
+QueueLoud.lua
+QueueLoud_UI.lua
