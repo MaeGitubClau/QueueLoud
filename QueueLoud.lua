@@ -161,6 +161,8 @@ f:SetScript("OnEvent", function(_, event, arg1)
         for k, v in pairs(DEFAULTS) do
             if QueueLoudDB[k] == nil then QueueLoudDB[k] = v end
         end
+        -- Build UI now that DB is guaranteed ready
+        if QL_UI and QL_UI.Build then QL_UI:Build() end
         print("|cff00ff00QueueLoud:|r Loaded. |cffffff00/ql|r to open settings.")
 
     elseif event == "PLAYER_ENTERING_WORLD" then

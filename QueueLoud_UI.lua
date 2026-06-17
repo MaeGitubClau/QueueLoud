@@ -187,13 +187,8 @@ local function BuildPanel()
     dismissBtn:Hide()
 end
 
--- ── Defer panel creation until QueueLoudDB is ready ─────────────────────────
+-- ── Called by QueueLoud.lua after QueueLoudDB is initialized ────────────────
 
-local initFrame = CreateFrame("Frame")
-initFrame:RegisterEvent("ADDON_LOADED")
-initFrame:SetScript("OnEvent", function(_, event, arg1)
-    if arg1 == "QueueLoud" then
-        BuildPanel()
-        initFrame:UnregisterEvent("ADDON_LOADED")
-    end
-end)
+function QL_UI:Build()
+    BuildPanel()
+end
